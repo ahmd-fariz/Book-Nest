@@ -1,0 +1,308 @@
+ERROR - 2024-03-10 11:21:14 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp2\htdocs\BookNest\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp2\htdocs\BookNest\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_book_nest', 3306, '', 0)
+#1 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp2\htdocs\BookNest\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp2\htdocs\BookNest\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp2\htdocs\BookNest\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp2\htdocs\BookNest\app\Controllers\UserController.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#8 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp2\htdocs\BookNest\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp2\htdocs\BookNest\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp2\\htdoc...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp2\htdocs\BookNest\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp2\htdocs\BookNest\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp2\htdocs\BookNest\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp2\htdocs\BookNest\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp2\htdocs\BookNest\app\Controllers\UserController.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#7 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp2\htdocs\BookNest\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp2\htdocs\BookNest\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp2\\htdoc...')
+#11 {main}
+CRITICAL - 2024-03-10 11:21:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_user`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\UserController.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp2\\htdocs\\BookNest\\public\\index.php')
+ERROR - 2024-03-10 11:24:00 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp2\htdocs\BookNest\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp2\htdocs\BookNest\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_book_nest', 3306, '', 0)
+#1 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp2\htdocs\BookNest\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp2\htdocs\BookNest\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp2\htdocs\BookNest\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp2\htdocs\BookNest\app\Controllers\UserController.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#8 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp2\htdocs\BookNest\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp2\htdocs\BookNest\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp2\\htdoc...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp2\htdocs\BookNest\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp2\htdocs\BookNest\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp2\htdocs\BookNest\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp2\htdocs\BookNest\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp2\htdocs\BookNest\app\Controllers\UserController.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#7 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp2\htdocs\BookNest\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp2\htdocs\BookNest\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp2\\htdoc...')
+#11 {main}
+CRITICAL - 2024-03-10 11:24:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_user`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\UserController.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp2\\htdocs\\BookNest\\public\\index.php')
+ERROR - 2024-03-10 11:24:09 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp2\htdocs\BookNest\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp2\htdocs\BookNest\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_book_nest', 3306, '', 0)
+#1 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp2\htdocs\BookNest\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp2\htdocs\BookNest\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp2\htdocs\BookNest\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp2\htdocs\BookNest\app\Controllers\UserController.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#8 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp2\htdocs\BookNest\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp2\htdocs\BookNest\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp2\\htdoc...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp2\htdocs\BookNest\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp2\htdocs\BookNest\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp2\htdocs\BookNest\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp2\htdocs\BookNest\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp2\htdocs\BookNest\app\Controllers\UserController.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#7 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp2\htdocs\BookNest\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp2\htdocs\BookNest\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp2\\htdoc...')
+#11 {main}
+CRITICAL - 2024-03-10 11:24:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_user`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\UserController.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp2\\htdocs\\BookNest\\public\\index.php')
+ERROR - 2024-03-10 11:24:15 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp2\htdocs\BookNest\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp2\htdocs\BookNest\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_book_nest', 3306, '', 0)
+#1 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp2\htdocs\BookNest\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp2\htdocs\BookNest\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp2\htdocs\BookNest\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp2\htdocs\BookNest\app\Controllers\UserController.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#8 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp2\htdocs\BookNest\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp2\htdocs\BookNest\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp2\\htdoc...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp2\htdocs\BookNest\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp2\htdocs\BookNest\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp2\htdocs\BookNest\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp2\htdocs\BookNest\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp2\htdocs\BookNest\app\Controllers\UserController.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#7 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp2\htdocs\BookNest\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp2\htdocs\BookNest\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp2\\htdoc...')
+#11 {main}
+CRITICAL - 2024-03-10 11:24:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_user`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\UserController.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp2\\htdocs\\BookNest\\public\\index.php')
+ERROR - 2024-03-10 11:25:15 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp2\htdocs\BookNest\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp2\htdocs\BookNest\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_book_nest', 3306, '', 0)
+#1 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp2\htdocs\BookNest\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp2\htdocs\BookNest\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp2\htdocs\BookNest\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp2\htdocs\BookNest\app\Controllers\UserController.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#8 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp2\htdocs\BookNest\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp2\htdocs\BookNest\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp2\\htdoc...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp2\htdocs\BookNest\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp2\htdocs\BookNest\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp2\htdocs\BookNest\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp2\htdocs\BookNest\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp2\htdocs\BookNest\app\Controllers\UserController.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#7 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp2\htdocs\BookNest\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp2\htdocs\BookNest\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp2\\htdoc...')
+#11 {main}
+CRITICAL - 2024-03-10 11:25:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_user`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\UserController.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp2\\htdocs\\BookNest\\public\\index.php')
+ERROR - 2024-03-10 11:25:16 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp2\htdocs\BookNest\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp2\htdocs\BookNest\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_book_nest', 3306, '', 0)
+#1 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp2\htdocs\BookNest\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp2\htdocs\BookNest\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp2\htdocs\BookNest\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp2\htdocs\BookNest\app\Controllers\UserController.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#8 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp2\htdocs\BookNest\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp2\htdocs\BookNest\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp2\\htdoc...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp2\htdocs\BookNest\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp2\htdocs\BookNest\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp2\htdocs\BookNest\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp2\htdocs\BookNest\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp2\htdocs\BookNest\app\Controllers\UserController.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#7 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp2\htdocs\BookNest\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp2\htdocs\BookNest\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp2\\htdoc...')
+#11 {main}
+CRITICAL - 2024-03-10 11:25:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_user`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\UserController.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp2\\htdocs\\BookNest\\public\\index.php')
+ERROR - 2024-03-10 11:25:17 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp2\htdocs\BookNest\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp2\htdocs\BookNest\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_book_nest', 3306, '', 0)
+#1 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp2\htdocs\BookNest\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp2\htdocs\BookNest\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp2\htdocs\BookNest\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp2\htdocs\BookNest\app\Controllers\UserController.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#8 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp2\htdocs\BookNest\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp2\htdocs\BookNest\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp2\\htdoc...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp2\htdocs\BookNest\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp2\htdocs\BookNest\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp2\htdocs\BookNest\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp2\htdocs\BookNest\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp2\htdocs\BookNest\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp2\htdocs\BookNest\app\Controllers\UserController.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#7 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\xampp2\htdocs\BookNest\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp2\htdocs\BookNest\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp2\htdocs\BookNest\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp2\\htdoc...')
+#11 {main}
+CRITICAL - 2024-03-10 11:25:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_user`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\UserController.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp2\\htdocs\\BookNest\\public\\index.php')

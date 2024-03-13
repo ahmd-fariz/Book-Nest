@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up">
             <form action="">
                 <h1>Create Account</h1>
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-                <input type="password" placeholder="Verify your password">
+                <input type="text" placeholder="name">
+                <input type="text" placeholder="Jenis Kelamin | Laki-Laki / Perempuan">
+                <input type="text" placeholder="No Telp">
+                <input type="role" placeholder="Petugas / Anggota">
+                <input type="email" placeholder="Your Email">
+                <input type="text" placeholder="Your Username ">
+                <input type="password" placeholder="Your password">
                 <a href="#">Sign Up</a>
             </form>
         </div>
@@ -42,4 +48,5 @@
     </div>
     <script src="js/script.js"></script>
 </body>
+
 </html>

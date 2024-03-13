@@ -14,9 +14,14 @@
             <form action="">
                 <h1>Create Account</h1>
                 <input type="text" placeholder="name">
-                <input type="text" placeholder="Jenis Kelamin | Laki-Laki / Perempuan">
+                <label for="gender"></label>
+                <select name="gender" id="gender">
+                    <option value="">Jenis Kelamin</option>
+                    <option value="male">Laki-laki</option>
+                    <option value="female">Perempuan</option>
+                </select>
                 <input type="text" placeholder="No Telp">
-                <input type="role" placeholder="Petugas / Anggota">
+                <input type="text" placeholder="Petugas / Anggota">
                 <input type="email" placeholder="Your Email">
                 <input type="text" placeholder="Your Username ">
                 <input type="password" placeholder="Your password">
@@ -24,11 +29,15 @@
             </form>
         </div>
         <div class="form-container sign-in">
-            <form action="">
+            <form action="/AuthController/save" method="post">
+                <?= csrf_field(); ?>
+                <?php if (session()->getFlashdata('error')) :  ?>
+                    <div> <?php session()->getFlashdata('error') ?></div>
+                <?php endif; ?>
                 <h1 class="si">Sign In</h1>
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-                <a href="#">Sign In</a>
+                <input type="text" placeholder="Username" name="username" autofocus>
+                <input type="password" placeholder="Password" name="password">
+                <button href="" type="submit">Sign In</a>
             </form>
         </div>
         <div class="toggle-container">

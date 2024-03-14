@@ -27,6 +27,31 @@ class AuthController extends BaseController
         } else {
             return redirect()->to('/login')->with('error', 'Username tidak ditemukan');
         }
+    }
 
+    public function login()
+    {
+        $login = $this->request->getPost('btn');
+        if ($login) {
+            $username = $this->request->getPost('username');
+            $password = $this->request->getPost('password');
+
+            $usermodel = new User;
+            $userDataUser = $usermodel->where('username', $username)->first();
+            $userDataPassword = $usermodel->where('password', $password)->first();
+
+            // if ($username == $userDataUser && $password == $userDataPassword) {
+            //     return redirect()->to('/UserController/index');
+            // } else {
+            //     $err = "password dan username salah";
+            //     return redirect()->to('/Auth/login')->with('error', $err);
+            // }
+            if ($username != $userDataUser && $password != $userDataPassword) {
+                $err = "password dan username salah";
+                return redirect()->to('/AuthController/create')->with('error', $err);
+            } else {
+                return redirect()->to('/UserController/index');
+            }
+        }
     }
 }

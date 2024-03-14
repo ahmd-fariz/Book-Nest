@@ -10,8 +10,9 @@ class UserController extends BaseController
 {
     public function index()
     {
-        $usermodel = new User;
-        $user = $usermodel->findAll();
-        dd($user);
+        // $usermodel = new User;
+        // $user = $usermodel->findAll();
+        // dd($user);
+        return view('test');
     }
 }

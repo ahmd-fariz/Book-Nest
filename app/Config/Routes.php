@@ -9,4 +9,3 @@ $routes->get('/', 'Home::index');
 $routes->get('/index', 'UserController::index');
 $routes->get('/login', 'AuthController::create');
 $routes->post('/login/save', 'AuthController::save');
-$routes->get('/loginin', 'CobaController::ho');

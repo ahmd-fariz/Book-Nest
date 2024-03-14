@@ -32,7 +32,7 @@
             </form>
         </div>
         <div class="form-container sign-in">
-            <form action="/AuthController/login" method="post">
+            <form action="" method="post">
                 <?= csrf_field(); ?>
                 <?php if (session()->getFlashdata('error')) :  ?>
                     <div> <?php session()->getFlashdata('error') ?></div>

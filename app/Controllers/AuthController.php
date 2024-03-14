@@ -52,6 +52,6 @@ class AuthController extends BaseController
             } else {
                 return redirect()->to('/UserController/index');
             }
-        }
+        }   
     }
 }

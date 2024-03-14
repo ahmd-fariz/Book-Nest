@@ -13,13 +13,16 @@
         <div class="form-container sign-up">
             <form action="">
                 <h1>Create Account</h1>
-                <input type="text" placeholder="name">
+                <input type="text" placeholder="Name">
                 <label for="gender"></label>
+            <div class="select-container">
                 <select name="gender" id="gender">
                     <option value="">Jenis Kelamin</option>
                     <option value="male">Laki-laki</option>
                     <option value="female">Perempuan</option>
                 </select>
+                    <img src="img/caret-down.png">
+            </div>
                 <input type="text" placeholder="No Telp">
                 <input type="text" placeholder="Petugas / Anggota">
                 <input type="email" placeholder="Your Email">
@@ -37,7 +40,7 @@
                 <h1 class="si">Sign In</h1>
                 <input type="text" placeholder="Username" name="username" autofocus>
                 <input type="password" placeholder="Password" name="password">
-                <button href="" type="submit">Sign In</a>
+                <a href="" type="submit">Sign In</a>
             </form>
         </div>
         <div class="toggle-container">

@@ -28,6 +28,5 @@ class AuthController extends BaseController
             return redirect()->to('/login')->with('error', 'Username tidak ditemukan');
         }
 
-        return view('Auth/login');
     }
 }

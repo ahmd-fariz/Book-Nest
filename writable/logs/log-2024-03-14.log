@@ -141,3 +141,18 @@ INFO - 2024-03-14 09:54:05 --> Session: Class initialized using 'CodeIgniter\Ses
 =======
 >>>>>>> 9ac5a4ae6f0e68410fad43745afbc2ed68801208
 >>>>>>> 8982fb9055335e05cfbb43c04400d1e6021b3d87
+CRITICAL - 2024-03-14 10:00:30 --> ParseError: syntax error, unexpected token "<<", expecting end of file
+in APPPATH\Config\Routes.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp2\\htdocs\\BookNest\\public\\index.php')
+CRITICAL - 2024-03-14 10:00:34 --> ParseError: syntax error, unexpected token "<<", expecting end of file
+in APPPATH\Config\Routes.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp2\\htdocs\\BookNest\\public\\index.php')
+INFO - 2024-03-14 10:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

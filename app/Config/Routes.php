@@ -10,3 +10,4 @@ $routes->get('/index', 'UserController::index');
 $routes->get('/login', 'AuthController::create');
 
 $routes->post('/login', 'AuthController::login');
+

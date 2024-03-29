@@ -12,7 +12,7 @@ class User extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['username', 'password'];
 
     protected bool $allowEmptyInserts = false;
 
@@ -39,4 +39,9 @@ class User extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    public function getUserByUsername($username)
+    {
+        return $this->where('username', $username)->first();
+    }
 }

@@ -32,12 +32,18 @@
             </form>
         </div>
         <div class="form-container sign-in">
-            <form action="" method="post">
+            <form action="/authcontroller/login" method="post">
                 <?= csrf_field(); ?>
-                <?php if (session()->getFlashdata('error')) :  ?>
-                    <div> <?php session()->getFlashdata('error') ?></div>
-                <?php endif; ?>
                 <h1 class="si">Sign In</h1>
+                <?php if (isset($error) && is_array($error)) : ?>
+                    <div>
+                        <?php foreach ($error as $err) : ?>
+                            <div><?= esc($err) ?></div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php elseif (isset($error)) : ?>
+                    <div><?= esc($error) ?></div>
+                <?php endif; ?>
                 <input type="text" placeholder="Username" name="username" autofocus>
                 <input type="password" placeholder="Password" name="password">
                 <button href="" type="submit" name="btn">Sign In</button>

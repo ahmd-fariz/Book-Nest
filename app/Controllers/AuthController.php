@@ -44,6 +44,56 @@ class AuthController extends BaseController
 
         echo view('/Auth/login', $data);
     }
+    public function logout()
+    {
+        $session = session();
+        $session->remove('isLoggedIn');
+        return redirect()->to('/login');
+    }
+    public function register()
+    {
+        helper(['form']);
+        $session = session();
+
+        $data = [];
+
+        if ($this->request->getMethod() == 'post') {
+            $rules = [
+                'name' => 'required',
+                'gender' => 'required',
+                'telp' => 'required',
+                'alamat' => 'required',
+                'role' => 'required',
+                'email' => 'required|valid_email|is_unique[users.email]',
+                'username' => 'required|is_unique[users.username]',
+                'password' => 'required|min_length[6]'
+            ];
+
+            if ($this->validate($rules)) {
+                $model = new User();
+
+                $data = [
+                    'name' => $this->request->getPost('name'),
+                    'gender' => $this->request->getPost('gender'),
+                    'telp' => $this->request->getPost('telp'),
+                    'alamat' => $this->request->getPost('alamat'),
+                    'role' => $this->request->getPost('role'),
+                    'email' => $this->request->getPost('email'),
+                    'username' => $this->request->getPost('username'),
+                    'password' => $this->request->getPost('password')
+                ];
+
+                $model->insert($data);
+
+                $session->setFlashdata('success', 'User registered successfully!');
+                return redirect()->to('/login');
+            } else {
+                $data['validation'] = $this->validator;
+            }
+        }
+
+        echo view('/Auth/login', $data);
+    }
 }
     
 

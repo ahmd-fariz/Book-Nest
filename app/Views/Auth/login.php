@@ -11,24 +11,54 @@
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form action="">
+            <form action="/authcontroller/register" method="post">
+                <?= csrf_field(); ?>
                 <h1>Create Account</h1>
-                <input type="text" placeholder="Name">
-                <label for="gender"></label>
-                <div class="select-container">
-                    <select name="gender" id="gender">
-                        <option value="">Jenis Kelamin</option>
-                        <option value="male">Laki-laki</option>
-                        <option value="female">Perempuan</option>
-                    </select>
-                    <img src="img/caret-down.png">
+                <?php if (session()->getFlashdata('success')) : ?>
+                    <div><?= session()->getFlashdata('success') ?></div>
+                <?php endif; ?>
+                <?php if (isset($validation)) : ?>
+                    <div><?= $validation->listErrors() ?></div>
+                <?php endif; ?>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" value="<?= old('name') ?>">
                 </div>
-                <input type="text" placeholder="No Telp">
-                <input type="text" placeholder="Petugas / Anggota">
-                <input type="email" placeholder="Your Email">
-                <input type="text" placeholder="Your Username ">
-                <input type="password" placeholder="Your password">
-                <a href="#">Sign Up</a>
+                <div>
+                    <label for="gender">Gender</label>
+                    <select name="gender" id="gender">
+                        <option value="Laki-Laki">Laki-Laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="name">Telp</label>
+                    <input type="text" name="telp" id="telp" value="<?= old('telp') ?>">
+                </div>
+                <div>
+                    <label for="name">Alamat</label>
+                    <input type="text" name="alamat" id="alamat" value="<?= old('alamat') ?>">
+                </div>
+                <div>
+                    <label for="role">Role</label>
+                    <select name="role" id="role">
+                        <option value="Petugas">Petugas</option>
+                        <option value="Anggota">Anggota</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" value="<?= old('email') ?>">
+                </div>
+                <div>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" value="<?= old('username') ?>">
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <button type="submit">Register</button>
             </form>
         </div>
         <div class="form-container sign-in">

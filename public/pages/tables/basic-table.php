@@ -1067,6 +1067,9 @@
                           <th>
                             Deadline
                           </th>
+                          <th>
+                            Action
+                          </th>
                         </tr>
                       </thead>
                       <tbody>
@@ -1086,6 +1089,9 @@
                           <td>
                             May 15, 2015
                           </td>
+                          <td>
+                            <a href="#">Edit </a> | <a href="#">Hapus</a>
+                          </td>
                         </tr>
                         <tr class="table-warning">
                           <td>
@@ -1102,6 +1108,9 @@
                           </td>
                           <td>
                             July 1, 2015
+                          </td>
+                          <td>
+                            <a href="#">Edit </a> | <a href="#">Hapus</a>
                           </td>
                         </tr>
                         <tr class="table-danger">
@@ -1120,6 +1129,9 @@
                           <td>
                             Apr 12, 2015
                           </td>
+                          <td>
+                            <a href="#">Edit </a> | <a href="#">Hapus</a>
+                          </td>
                         </tr>
                         <tr class="table-success">
                           <td>
@@ -1137,6 +1149,9 @@
                           <td>
                             May 15, 2015
                           </td>
+                          <td>
+                            <a href="#">Edit </a> | <a href="#">Hapus</a>
+                          </td>
                         </tr>
                         <tr class="table-primary">
                           <td>
@@ -1153,6 +1168,28 @@
                           </td>
                           <td>
                             May 03, 2015
+                          </td>
+                          <td>
+                            <a href="#">Edit </a> | <a href="#">Hapus</a>
+                          </td>
+                        </tr><tr class="table-danger">
+                          <td>
+                            3
+                          </td>
+                          <td>
+                           gibran
+                          </td>
+                          <td>
+                            Premeire
+                          </td>
+                          <td>
+                            $138.00
+                          </td>
+                          <td>
+                            Apr 12, 2015
+                          </td>
+                          <td>
+                            <a href="#">Edit </a> | <a href="#">Hapus</a>
                           </td>
                         </tr>
                       </tbody>

@@ -7,12 +7,16 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('/index', 'UserController::index');
+$routes->get('/insert', 'InputController::index');
 
 //Auth
 $routes->get('/login', 'AuthController::login');
 $routes->post('/login', 'AuthController::login');
 
-$routes->get('/login', 'AuthController::register');
-$routes->post('/login', 'AuthController::register');
+$routes->get('/register', 'AuthController::register');
+$routes->post('/register', 'AuthController::register');
 
+$route['default_controller'] = 'form';
+$route['form/submit'] = 'form/submit';
+$route['form/success'] = 'form/success';
 

@@ -287,3 +287,6 @@ WHERE `email` = :email:
 12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Book-Nest\\public\\index.php')
+INFO - 2024-05-03 03:28:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 03:28:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 03:28:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

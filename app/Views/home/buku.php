@@ -1,28 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulir Input Data Buku</title>
+    <title>Tambah Buku</title>
 </head>
 <body>
-    <div class="container">
-        <div class="form-container">
-            <form action="<?php echo base_url('inputController/submit');?>" method="post"> <!-- Ubah action sesuai dengan rute yang Anda tentukan -->
-                <div>
-                    <input type="text" name="judul" placeholder="judul"><br><br>
-                    <input type="text" name="tahun" placeholder="tahun"><br><br>
-                    <input type="text" name="jumlah" placeholder="jumlah"><br><br>
-                    <label for="loker">Pilih loker</label>
-                    <select name="loker" id="loker">
-                        <option value="1">Loker 1</option>
-                        <option value="2">Loker 2</option>
-                        <option value="3">Loker 3</option>
-                    </select>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
+    <h2>Tambah Buku</h2>
+    <form action="/inputcontroller/store" method="post">
+        <?= csrf_field() ?>
+        <label for="judul">Judul:</label>
+        <input type="text" name="judul" id="judul"><br>
+
+        <label for="penulis_id">Penulis:</label>
+        <select name="penulis_id" id="penulis_id">
+            <?php foreach ($penulis as $p): ?>
+                <option value="<?= $p['id'] ?>"><?= $p['nama'] ?></option>
+            <?php endforeach; ?>
+        </select><br>
+
+        <label for="penerbit_id">Penerbit:</label>
+        <select name="penerbit_id" id="penerbit_id">
+            <?php foreach ($penerbit as $p): ?>
+                <option value="<?= $p['id'] ?>"><?= $p['nama'] ?></option>
+            <?php endforeach; ?>
+        </select><br>
+
+        <label for="tahun">Tahun:</label>
+        <input type="date" name="tahun" id="tahun"><br>
+
+        <label for="jumlah">Jumlah:</label>
+        <input type="number" name="jumlah" id="jumlah"><br>
+
+        <label for="kategori_id">Kategori:</label>
+        <select name="kategori_id" id="kategori_id">
+            <?php foreach ($kategori as $k): ?>
+                <option value="<?= $k['id'] ?>"><?= $k['nama'] ?></option>
+            <?php endforeach; ?>
+        </select><br>
+
+        <label for="loker_buku">Loker Buku:</label>
+        <input type="text" name="loker_buku" id="loker_buku"><br>
+
+        <input type="submit" value="Tambah Buku">
+    </form>
 </body>
 </html>

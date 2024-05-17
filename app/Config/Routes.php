@@ -20,3 +20,8 @@ $route['default_controller'] = 'form';
 $route['form/submit'] = 'form/submit';
 $route['form/success'] = 'form/success';
 
+$routes->get('/inputcontroller/create', 'InputController::create');
+$routes->post('/inputcontroller/store', 'InputController::store');
+
+$routes->get('/inputcontroller/CreateKategori', 'InputController::CreateKategori');
+$routes->post('/inputcontroller/storekategori', 'InputController::storekategori');

@@ -2,28 +2,60 @@
 
 namespace App\Controllers;
 
-use App\Controllers\BaseController;
-use App\Models\Buku; 
+use App\Models\BukuModel;
+use App\Models\PenulisModel;
+use App\Models\PenebitModel;
+use App\Models\KategoriModel;
+use CodeIgniter\Controller;
 
-class InputController extends BaseController
+class InputController extends Controller
 {
-    public function index() {
-        $bukuModel = new Buku();
-        return view('/home/buku');
+    //insert buku
+    public function create()
+    {
+        $penulisModel = new PenulisModel();
+        $penerbitModel = new PenebitModel();
+        $kategoriModel = new KategoriModel();
+
+        $data['penulis'] = $penulisModel->findAll();
+        $data['penerbit'] = $penerbitModel->findAll();
+        $data['kategori'] = $kategoriModel->findAll();
+
+        return view('/home/buku', $data);
     }
 
-    public function submit() {
-        $judul = $this->request->getPost('judul');
-        $tahun = $this->request->getPost('tahun');
-        $jumlah = $this->request->getPost('jumlah');
-        $loker = $this->request->getPost('loker');
+    public function store()
+    {
+        $bukuModel = new BukuModel();
 
-        $bukuModel = new Buku(); 
-        $bukuModel->save_data($judul, $tahun, $jumlah, $loker);
-        return redirect()->to('inputController/success');
+        $data = [
+            'judul' => $this->request->getPost('judul'),
+            'penulis_id' => $this->request->getPost('penulis_id'),
+            'penerbit_id' => $this->request->getPost('penerbit_id'),
+            'tahun' => $this->request->getPost('tahun'),
+            'jumlah' => $this->request->getPost('jumlah'),
+            'kategori_id' => $this->request->getPost('kategori_id'),
+            'loker_buku' => $this->request->getPost('loker_buku')
+        ];
+
+        $bukuModel->insert($data);
+
+        return redirect()->to('/inputcontroller/create');
     }
 
-    public function success() {
-        echo "Data berhasil disimpan!";
+    //insert kategori
+    public function CreateKategori(){
+        return view('/home/kategori');
+    }
+    
+    public function storekategori(){
+        $kategoriModel = new KategoriModel;
+        
+        $data = [
+            'nama' =>  $this->request->getpost('kategori')
+        ];
+        $kategoriModel->insert($data);
+
+        return redirect()->to('/inputcontroller/CreateKategori');
     }
 }

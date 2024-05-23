@@ -25,5 +25,5 @@ class BukuModel extends Model
                     ->join('tb_penebit', 'tb_penebit.id = tb_buku.penerbit_id')
                     ->join('tb_kategori', 'tb_kategori.id = tb_buku.kategori_id')
                     ->findAll();
-    }
+    }  
 }

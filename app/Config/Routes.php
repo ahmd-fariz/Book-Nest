@@ -25,3 +25,13 @@ $routes->post('/inputcontroller/store', 'InputController::store');
 
 $routes->get('/inputcontroller/CreateKategori', 'InputController::CreateKategori');
 $routes->post('/inputcontroller/storekategori', 'InputController::storekategori');
+
+$routes->get('/peminjaman/create', 'PeminjamanController::create');
+$routes->post('/peminjaman/store', 'PeminjamanController::store');
+$routes->get('/peminjaman/return', 'PeminjamanController::createReturn');
+$routes->post('/peminjaman/return', 'PeminjamanController::return');
+$routes->get('/peminjaman/update-status', 'PeminjamanController::updateStatus');
+
+$routes->get('/cron/update-status', 'Cron::updateStatus');
+$routes->get('/bukus', 'BukuController::index');
+

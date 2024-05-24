@@ -9,10 +9,11 @@
 <body>
     <div class="container">
         <h1 class="mt-5">Daftar Buku</h1>
-        <table class="table table-bordered mt-3">
+        <table class="table table-bordered mt-3 ">
             <thead>
                 <tr>
                     <th>ID</th>
+                    <th>Sampul</th>
                     <th>Judul</th>
                     <th>Penulis</th>
                     <th>Penerbit</th>
@@ -26,6 +27,7 @@
                 <?php foreach ($data as $buku): ?>
                     <tr>
                         <td><?= $buku['id'] ?></td>
+                        <td><img src="../img/<?= $buku['sampul'] ?>" height="100" srcset=""></td>
                         <td><?= $buku['judul'] ?></td>
                     <td><?= isset($buku['penulis_nama']) ? $buku['penulis_nama'] : 'Tidak ada data' ?></td>
                         <td><?= isset($buku['penebit_nama']) ? $buku['penebit_nama'] : 'Tidak ada data' ?></td>

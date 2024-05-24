@@ -11,7 +11,7 @@ class BukuController extends BaseController
     public function index()
     {
         $buku = new BukuModel();
-        $data = $buku->findAll();
+        $data = $buku->getBukuWithRelations();
         return view('/home/table_buku', ['data' => $data]);
     }
 }

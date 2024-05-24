@@ -18,4 +18,12 @@ class PeminjamanModel extends Model
         'status',
         'denda'
     ];
+
+    public function getPeminjamanWithRelations()
+    {
+        return $this->select('tb_peminjaman.*, tb_user.nama as user_nama, tb_buku.judul as buku_nama')
+                    ->join('tb_user', 'tb_user.id = tb_peminjaman.user_id')
+                    ->join('tb_buku', 'tb_buku.id = tb_peminjaman.buku_id')
+                    ->findAll();
+    }  
 }

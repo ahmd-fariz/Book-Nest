@@ -13,6 +13,6 @@ class UserController extends BaseController
         // $usermodel = new User;
         // $user = $usermodel->findAll();
         // dd($user);
-        return view('test');
+        return view('/index/index');
     }
 }

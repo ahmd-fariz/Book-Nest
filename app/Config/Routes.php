@@ -34,4 +34,7 @@ $routes->get('/peminjaman/update-status', 'PeminjamanController::updateStatus');
 
 $routes->get('/cron/update-status', 'Cron::updateStatus');
 $routes->get('/bukus', 'BukuController::index');
+$routes->get('/peminjamans', 'PeminjamanController::index');
+
+
 

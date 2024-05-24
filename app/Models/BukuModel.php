@@ -20,7 +20,7 @@ class BukuModel extends Model
 
     public function getBukuWithRelations()
     {
-        return $this->select('tb_buku.*, tb_penulis.nama, tb_penebit.nama, tb_kategori.nama')
+        return $this->select('tb_buku.*, tb_penulis.nama as penulis_nama, tb_penebit.nama as penebit_nama, tb_kategori.nama as kategori_nama')
                     ->join('tb_penulis', 'tb_penulis.id = tb_buku.penulis_id')
                     ->join('tb_penebit', 'tb_penebit.id = tb_buku.penerbit_id')
                     ->join('tb_kategori', 'tb_kategori.id = tb_buku.kategori_id')

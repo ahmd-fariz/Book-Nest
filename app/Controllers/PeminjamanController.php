@@ -112,4 +112,10 @@ class PeminjamanController extends Controller
 
         return view('/home/pengembalian_buku', $data);
     }
+    public function index()
+    {
+        $peminjaman = new PeminjamanModel();
+        $data = $peminjaman->getPeminjamanWithRelations();
+        return view('/home/table_peminjaman', ['data' => $data]);
+    }
 }

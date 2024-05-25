@@ -10,12 +10,14 @@ class BukuModel extends Model
     protected $primaryKey = 'id';
     protected $allowedFields = [
         'judul', 
+        'sinopsis',
         'penulis_id', 
         'penerbit_id', 
         'tahun', 
         'jumlah', 
         'kategori_id', 
-        'loker_buku'
+        'loker_buku',
+        'sampul'
     ];
 
     public function getBukuWithRelations()

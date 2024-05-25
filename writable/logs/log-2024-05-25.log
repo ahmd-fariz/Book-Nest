@@ -1,0 +1,58 @@
+CRITICAL - 2024-05-25 07:41:06 --> Error: Class "App\Models\PenerbitModel" not found
+in APPPATH\Controllers\InputController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\InputController->create()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InputController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Book-Nest\\public\\index.php')
+INFO - 2024-05-25 07:42:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-25 07:42:53 --> ErrorException: Undefined variable $foto
+in APPPATH\Controllers\InputController.php on line 29.
+ 1 APPPATH\Controllers\InputController.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $foto', 'C:\\xampp\\htdocs\\Book-Nest\\app\\Controllers\\InputController.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\InputController->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InputController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Book-Nest\\public\\index.php')
+INFO - 2024-05-25 07:43:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-25 07:43:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-25 07:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-25 07:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-25 08:07:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-25 08:07:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-25 08:52:48 --> ErrorException: Undefined variable $data
+in APPPATH\Views\index\library.php on line 22.
+ 1 APPPATH\Views\index\library.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\Book-Nest\\app\\Views\\index\\library.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Book-Nest\\app\\Views\\index\\library.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/index/library', [], true)
+ 5 APPPATH\Controllers\UserController.php(24): view('/index/library')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->library()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Book-Nest\\public\\index.php')
+CRITICAL - 2024-05-25 08:53:07 --> ErrorException: Undefined variable $buku
+in APPPATH\Views\index\library.php on line 22.
+ 1 APPPATH\Views\index\library.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $buku', 'C:\\xampp\\htdocs\\Book-Nest\\app\\Views\\index\\library.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Book-Nest\\app\\Views\\index\\library.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/index/library', [], true)
+ 5 APPPATH\Controllers\UserController.php(24): view('/index/library')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->library()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Book-Nest\\public\\index.php')
+CRITICAL - 2024-05-25 08:55:49 --> ErrorException: Undefined array key "judul"
+in APPPATH\Views\index\library.php on line 32.
+ 1 APPPATH\Views\index\library.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "judul"', 'C:\\xampp\\htdocs\\Book-Nest\\app\\Views\\index\\library.php', 32)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Book-Nest\\app\\Views\\index\\library.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/index/library', [], true)
+ 5 APPPATH\Controllers\UserController.php(24): view('/index/library', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->library()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Book-Nest\\public\\index.php')

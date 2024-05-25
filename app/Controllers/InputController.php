@@ -27,20 +27,30 @@ class InputController extends Controller
     public function store()
     {
         $bukuModel = new BukuModel();
+        $foto = $this->request->getFile('foto');
 
-        $data = [
-            'judul' => $this->request->getPost('judul'),
-            'penulis_id' => $this->request->getPost('penulis_id'),
-            'penerbit_id' => $this->request->getPost('penerbit_id'),
-            'tahun' => $this->request->getPost('tahun'),
-            'jumlah' => $this->request->getPost('jumlah'),
-            'kategori_id' => $this->request->getPost('kategori_id'),
-            'loker_buku' => $this->request->getPost('loker_buku')
-        ];
+        if ($foto && $foto->isValid() && !$foto->hasMoved()) {
+            $newName = $foto->getRandomName();
+            $foto->move(WRITEPATH . 'uploads', $newName);
 
-        $bukuModel->insert($data);
+            $data = [
+                'judul' => $this->request->getPost('judul'),
+                'sinopsis' => $this->request->getPost('sinopsis'),
+                'penulis_id' => $this->request->getPost('penulis_id'),
+                'penerbit_id' => $this->request->getPost('penerbit_id'),
+                'tahun' => $this->request->getPost('tahun'),
+                'jumlah' => $this->request->getPost('jumlah'),
+                'kategori_id' => $this->request->getPost('kategori_id'),
+                'loker_buku' => $this->request->getPost('loker_buku'),
+                'foto' => $newName
+            ];
 
-        return redirect()->to('/inputcontroller/create');
+            $bukuModel->insert($data);
+
+            return redirect()->to('/inputcontroller/create')->with('success', 'Buku berhasil ditambahkan.');
+        } else {
+            return redirect()->to('/inputcontroller/create')->with('error', 'Gagal mengunggah foto.');
+        }
     }
 
     //insert kategori

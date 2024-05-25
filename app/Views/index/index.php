@@ -14,7 +14,7 @@
         <div class="w-72 h-72 bg-black mt-12 ml-[6rem] xl:ml-14 relative rounded-md">
           <img class="bg-cover w-full bg-center h-full rounded-md" src="img/bg_index.jpg" alt="" />
           <div class="absolute bottom-0 left-20 translate-y-4">
-            <button class="bg-[#748067] px-5 rounded-lg py-3 hover:bg-[#748067]/90 hover:text-[#e9ecf5] font-medium">Get Started</button>
+            <button type="submit" href="/library" class="bg-[#748067] px-5 rounded-lg py-3 hover:bg-[#748067]/90 hover:text-[#e9ecf5] font-medium">Get Started</button>
           </div>
         </div>
 
@@ -150,7 +150,7 @@
                 <p class="font-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus at dolor dolore neque ipsum sunt laborum ea doloremque vitae!</p>
               </div>
               <div class="absolute right-3 bottom-5">
-                <button class="px-4 py-2 bg-black/65 rounded-full hover:bg-black/45">click here</button>
+                <a href="/library" class="px-4 py-2 bg-black/65 rounded-full hover:bg-black/45">click here</a>
               </div>
             </div>
 
@@ -163,12 +163,12 @@
                 <p class="font-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus at dolor dolore neque ipsum sunt laborum ea doloremque vitae!</p>
               </div>
               <div class="absolute right-3 bottom-5">
-                <button class="px-4 py-2 bg-black/65 rounded-full hover:bg-black/45">click here</button>
+                <a href="/library" class="px-4 py-2 bg-black/65 rounded-full hover:bg-black/45">click here</a>
               </div>
             </div>
 
             <div class="swiper-slide w-full h-full relative">
-              <img class="w-full h-full bg-cover" src="img/abt1.jpg" alt="" />
+              <img class="w-full h-full bg-cover" src="/public/img/bumi.jpg" alt="" />
               <div class="absolute bottom-36 left-24">
                 <h1 class="text-2xl font-semibold">Drama</h1>
               </div>
@@ -176,7 +176,7 @@
                 <p class="font-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus at dolor dolore neque ipsum sunt laborum ea doloremque vitae!</p>
               </div>
               <div class="absolute right-3 bottom-5">
-                <button class="px-4 py-2 bg-black/65 rounded-full hover:bg-black/45">click here</button>
+                <a href="/library" class="px-4 py-2 bg-black/65 rounded-full hover:bg-black/45">click here</a>
               </div>
             </div>
           </div>

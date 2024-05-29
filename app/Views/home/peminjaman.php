@@ -2,36 +2,52 @@
 <html>
 <head>
     <title>Tambah Peminjaman</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
-    <h2>Tambah Peminjaman</h2>
-    <form action="/peminjaman/store" method="post">
-        <?= csrf_field() ?>
-        
-        <label for="user_id">User:</label>
-        <select name="user_id" id="user_id">
-            <?php foreach ($users as $user): ?>
-                <option value="<?= $user['id'] ?>"><?= $user['nama'] ?></option>
-            <?php endforeach; ?>
-        </select><br>
+    <div class="container mt-5">
+        <h2 class="mb-4">Tambah Peminjaman</h2>
+        <form action="/peminjaman/store" method="post">
+            <?= csrf_field() ?>
+            
+            <div class="form-group">
+                <label for="user_id">User:</label>
+                <select name="user_id" id="user_id" class="form-control">
+                    <?php foreach ($users as $user): ?>
+                        <option value="<?= $user['id'] ?>"><?= $user['nama'] ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
 
-        <label for="buku_id">Buku:</label>
-        <select name="buku_id" id="buku_id">
-            <?php foreach ($bukus as $buku): ?>
-                <option value="<?= $buku['id'] ?>"><?= $buku['judul'] ?></option>
-            <?php endforeach; ?>
-        </select><br>
+            <div class="form-group">
+                <label for="buku_id">Buku:</label>
+                <select name="buku_id" id="buku_id" class="form-control">
+                    <?php foreach ($bukus as $buku): ?>
+                        <option value="<?= $buku['id'] ?>"><?= $buku['judul'] ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
 
-        <label for="jumlah_buku">Jumlah Buku:</label>
-        <input type="number" name="jumlah_buku" id="jumlah_buku"><br>
+            <div class="form-group">
+                <label for="jumlah_buku">Jumlah Buku:</label>
+                <input type="number" name="jumlah_buku" id="jumlah_buku" class="form-control">
+            </div>
 
-        <label for="tgl_pinjam">Tanggal Pinjam:</label>
-        <input type="date" name="tgl_pinjam" id="tgl_pinjam"><br>
+            <div class="form-group">
+                <label for="tgl_pinjam">Tanggal Pinjam:</label>
+                <input type="date" name="tgl_pinjam" id="tgl_pinjam" class="form-control">
+            </div>
 
-        <label for="tgl_kembali">Tanggal Kembali:</label>
-        <input type="date" name="tgl_kembali" id="tgl_kembali"><br>
+            <div class="form-group">
+                <label for="tgl_kembali">Tanggal Kembali:</label>
+                <input type="date" name="tgl_kembali" id="tgl_kembali" class="form-control">
+            </div>
 
-        <input type="submit" value="Tambah Peminjaman">
-    </form>
+            <button type="submit" class="btn btn-primary">Tambah Peminjaman</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>

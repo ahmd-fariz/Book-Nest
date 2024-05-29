@@ -9,7 +9,12 @@
 <body>
     <div class="container">
         <h1 class="mt-5">Daftar Buku</h1>
-        <table class="table table-bordered mt-3">
+
+        <?php if (session()->getFlashdata('success')): ?>
+            <div class="alert alert-success"><?= session()->getFlashdata('success') ?></div>
+        <?php endif; ?>
+
+        <table class="table ">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -21,6 +26,7 @@
                     <th>Batas Waktu</th>
                     <th>Status</th>
                     <th>Denda</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -35,6 +41,14 @@
                         <td><?= $p['batas_waktu'] ?></td>
                         <td><?= $p['status'] ?></td>
                         <td><?= $p['denda'] ?></td>
+                        <td>
+                            <a href="/peminjaman/edit/<?= $p['id'] ?>" class="btn btn-warning btn-sm">Edit</a>
+                            <form action="/peminjaman/delete/<?= $p['id'] ?>" method="post" style="display:inline;">
+                                <?= csrf_field() ?>
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
+                            </form>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

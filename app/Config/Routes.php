@@ -34,9 +34,13 @@ $routes->get('/peminjaman/update-status', 'PeminjamanController::updateStatus');
 
 $routes->get('/cron/update-status', 'Cron::updateStatus');
 $routes->get('/bukus', 'BukuController::index');
-$routes->get('/peminjamans', 'PeminjamanController::index');
+$routes->get('/peminjamans', 'PeminjamanController::index');    
 
 $routes->get('/library', 'UserController::library');
+
+$routes->get('/peminjaman/edit/(:num)', 'PeminjamanController::edit/$1');
+$routes->delete('/peminjaman/delete/(:num)', 'PeminjamanController::delete/$1');
+
 
 
 

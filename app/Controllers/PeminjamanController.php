@@ -2,14 +2,22 @@
 
 namespace App\Controllers;
 
-use App\Models\PeminjamanModel;
-use App\Models\UserModel;
-use App\Models\BukuModel;
-use CodeIgniter\Controller;
 use DateTime;
+use App\Models\BukuModel;
+use App\Models\UserModel;
+use CodeIgniter\Controller;
+use App\Models\PeminjamanModel;
+use App\Models\DetailPeminjamanModel;
 
 class PeminjamanController extends Controller
 {
+    public function index()
+    {
+        $peminjaman = new PeminjamanModel();
+        $data = $peminjaman->getPeminjamanWithRelations();
+        return view('/home/table_peminjaman', ['data' => $data]);
+    }
+
     public function create()
     {
         $userModel = new UserModel();
@@ -112,10 +120,47 @@ class PeminjamanController extends Controller
 
         return view('/home/pengembalian_buku', $data);
     }
-    public function index()
+
+    public function edit($id)
     {
-        $peminjaman = new PeminjamanModel();
-        $data = $peminjaman->getPeminjamanWithRelations();
-        return view('/home/table_peminjaman', ['data' => $data]);
+        $peminjamanModel = new PeminjamanModel();
+        $peminjaman = $peminjamanModel->find($id);
+
+        $userModel = new UserModel();
+        $bukuModel = new BukuModel();
+
+        $data['users'] = $userModel->findAll();
+        $data['bukus'] = $bukuModel->findAll();
+        $data['peminjaman'] = $peminjaman;
+
+        return view('/home/edit_peminjaman', $data);
+    }
+
+    public function update($id)
+    {
+        $peminjamanModel = new PeminjamanModel();
+
+        $data = [
+            'user_id' => $this->request->getPost('user_id'),
+            'buku_id' => $this->request->getPost('buku_id'),
+            'jumlah_buku' => $this->request->getPost('jumlah_buku'),
+            'tgl_pinjam' => $this->request->getPost('tgl_pinjam'),
+            'batas_waktu' => $this->calculateBatasWaktu($this->request->getPost('tgl_pinjam')),
+            'status' => $this->request->getPost('status'),
+            'denda' => $this->request->getPost('denda'),
+        ];
+
+        $peminjamanModel->update($id, $data);
+
+        return redirect()->to('/peminjamancontroller')->with('success', 'Data peminjaman berhasil diperbarui.');
+    }
+
+    public function delete($id)
+    {
+        $peminjamanModel = new PeminjamanModel();
+        $peminjamanModel->delete($id);
+
+        return redirect()->to('/peminjamancontroller')->with('success', 'Data peminjaman berhasil dihapus.');
     }
 }
+

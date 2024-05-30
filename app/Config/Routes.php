@@ -41,6 +41,7 @@ $routes->get('/library', 'UserController::library');
 $routes->get('/peminjaman/edit/(:num)', 'PeminjamanController::edit/$1');
 $routes->delete('/peminjaman/delete/(:num)', 'PeminjamanController::delete/$1');
 
+$routes->get('/admin', 'DashboardController::index');
 
 
 

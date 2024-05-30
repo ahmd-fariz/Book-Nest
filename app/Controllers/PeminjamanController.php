@@ -42,9 +42,12 @@ class PeminjamanController extends Controller
             'status' => 'Dipinjam',
             'denda' => 0
         ];
-
-        $peminjamanModel->insert($data);
-
+        if ($peminjamanModel->insert($data)) {
+            session()->setFlashdata('success', 'Peminjaman berhasil ditambahkan.');
+        } else {
+            session()->setFlashdata('error', 'Gagal menambahkan peminjaman.');
+        }
+    
         return redirect()->to('/peminjaman/create');
     }
 

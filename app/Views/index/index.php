@@ -150,7 +150,7 @@
                 <p class="font-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus at dolor dolore neque ipsum sunt laborum ea doloremque vitae!</p>
               </div>
               <div class="absolute right-3 bottom-5">
-                <a href="/library" class="px-4 py-2 bg-black/65 rounded-full hover:bg-black/45">click here</a>
+                <a href="/peminjaman/create" class="px-4 py-2 bg-black/65 rounded-full hover:bg-black/45">click here</a>
               </div>
             </div>
 
@@ -163,7 +163,7 @@
                 <p class="font-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus at dolor dolore neque ipsum sunt laborum ea doloremque vitae!</p>
               </div>
               <div class="absolute right-3 bottom-5">
-                <a href="/library" class="px-4 py-2 bg-black/65 rounded-full hover:bg-black/45">click here</a>
+                <a href="/peminjaman/create" class="px-4 py-2 bg-black/65 rounded-full hover:bg-black/45">click here</a>
               </div>
             </div>
 
@@ -176,7 +176,7 @@
                 <p class="font-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus at dolor dolore neque ipsum sunt laborum ea doloremque vitae!</p>
               </div>
               <div class="absolute right-3 bottom-5">
-                <a href="/library" class="px-4 py-2 bg-black/65 rounded-full hover:bg-black/45">click here</a>
+                <a href="/peminjaman/create" class="px-4 py-2 bg-black/65 rounded-full hover:bg-black/45">click here</a>
               </div>
             </div>
           </div>

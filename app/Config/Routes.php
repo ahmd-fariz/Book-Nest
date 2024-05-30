@@ -43,5 +43,8 @@ $routes->delete('/peminjaman/delete/(:num)', 'PeminjamanController::delete/$1');
 
 $routes->get('/admin', 'DashboardController::index');
 
+$routes->get('/buku/edit/(:num)', 'BukuController::edit/$1');
+$routes->post('/buku/update/(:num)', 'BukuController::update/$1');
+$routes->delete('/buku/delete/(:num)', 'BukuController::delete/$1');
 
 

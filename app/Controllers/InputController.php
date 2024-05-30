@@ -27,11 +27,11 @@ class InputController extends Controller
     public function store()
     {
         $bukuModel = new BukuModel();
-        $foto = $this->request->getFile('foto');
+        $sampul = $this->request->getFile('foto');
 
-        if ($foto && $foto->isValid() && !$foto->hasMoved()) {
-            $newName = $foto->getRandomName();
-            $foto->move(WRITEPATH . 'uploads', $newName);
+        if ($sampul && $sampul->isValid() && !$sampul->hasMoved()) {
+            $newName = $sampul->getRandomName();
+            $sampul->move(WRITEPATH . 'uploads', $newName);
 
             $data = [
                 'judul' => $this->request->getPost('judul'),
@@ -42,7 +42,7 @@ class InputController extends Controller
                 'jumlah' => $this->request->getPost('jumlah'),
                 'kategori_id' => $this->request->getPost('kategori_id'),
                 'loker_buku' => $this->request->getPost('loker_buku'),
-                'foto' => $newName
+                'sampul' => $newName
             ];
 
             $bukuModel->insert($data);

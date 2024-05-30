@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
-    <section id="header" style="background-image: url('img/1.jpg')" class="bg-fixed bg-cover bg-center min-h-screen">
+    <section id="header" style="background-image: url('/img/1.jpeg')" class="bg-fixed bg-cover bg-center min-h-screen">
       <div class="flex flex-wrap w-full min-h-screen bg-gradient-to-r from-black/50 via-transparent to-transparent">
         <div class="w-72 h-72 bg-black mt-12 ml-[6rem] xl:ml-14 relative rounded-md">
-          <img class="bg-cover w-full bg-center h-full rounded-md" src="img/bg_index.jpg" alt="" />
+          <img class="bg-cover w-full bg-center h-full rounded-md" src="/img/bg_inddex.jpeg" alt="" />
           <div class="absolute bottom-0 left-20 translate-y-4">
             <button type="submit" href="/library" class="bg-[#748067] px-5 rounded-lg py-3 hover:bg-[#748067]/90 hover:text-[#e9ecf5] font-medium">Get Started</button>
           </div>
@@ -55,13 +55,13 @@
           </div>
 
           <div class="w-[25rem] h-[12rem] rounded-full overflow-hidden mt-8 bg-black shadow-sm">
-            <img class="bg-cover bg-center w-full h-full" src="img/1.jpg" alt="" />
+            <img class="bg-cover bg-center w-full h-full" src="/img/1.jpeg" alt="" />
           </div>
         </div>
 
         <div class="ml-1">
           <div class="xl:ml-72 ml-24 mt-6 w-72 h-72 hover:brightness-150 transition rounded-lg overflow-hidden">
-            <img class="w-full h-full bg-cover bg-center" src="img/abt1.jpg" alt="" />
+            <img class="w-full h-full bg-cover bg-center" src="/img/abt1.jpeg" alt="" />
           </div>
 
           <div class="mt-7 xl:-translate-x-12 xl:text-left text-center">
@@ -87,7 +87,7 @@
 
       <div class="flex flex-wrap w-full justify-center mt-12 gap-4 pb-2">
         <div class="group w-64 h-48 bg-black rounded-lg relative overflow-hidden">
-          <img class="w-full h-full rounded-lg" src="img/bg_index.jpg" alt="" />
+          <img class="w-full h-full rounded-lg" src="/img/bg_inddex.jpeg" alt="" />
           <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent">
             <div class="absolute left-2 bottom-3">
               <h1 class="text-[#e0e0e0] text-lg font-semibold">Mudah di akses</h1>
@@ -97,7 +97,7 @@
         </div>
 
         <div class="w-64 h-48 bg-black rounded-lg relative overflow-hidden">
-          <img class="w-full h-full rounded-lg" src="img/bg_index.jpg" alt="" />
+          <img class="w-full h-full rounded-lg" src="/img/bg_inddex.jpeg" alt="" />
           <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent">
             <div class="absolute left-2 bottom-3">
               <h1 class="text-[#e0e0e0] text-lg font-semibold">Mudah di akses</h1>
@@ -107,7 +107,7 @@
         </div>
 
         <div class="w-64 h-48 bg-black rounded-lg relative overflow-hidden">
-          <img class="w-full h-full rounded-lg" src="img/bg_index.jpg" alt="" />
+          <img class="w-full h-full rounded-lg" src="/img/bg_inddex.jpeg" alt="" />
           <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent">
             <div class="absolute left-2 bottom-3">
               <h1 class="text-[#e0e0e0] text-lg font-semibold">Mudah di akses</h1>
@@ -126,15 +126,15 @@
 
           <div class="flex flex-wrap mt-4 gap-4">
             <div class="mx-auto bg-black w-52 h-52 shadow-lg rounded-xl overflow-hidden">
-              <img class="w-full h-full bg-cover" src="img/abt2.jpg" alt="" />
+              <img class="w-full h-full bg-cover" src="/img/abt2.jpeg" alt="" />
             </div>
 
             <div class="mx-auto bg-black mt-8 w-52 h-52 shadow-lg rounded-xl overflow-hidden">
-              <img class="w-full h-full bg-cover" src="img/abt2.jpg" alt="" />
+              <img class="w-full h-full bg-cover" src="/img/abt2.jpeg" alt="" />
             </div>
 
             <div class="mx-auto bg-black w-52 h-52 shadow-lg rounded-xl overflow-hidden">
-              <img class="w-full h-full bg-cover" src="img/abt2.jpg" alt="" />
+              <img class="w-full h-full bg-cover" src="/img/abt2.jpeg" alt="" />
             </div>
           </div>
         </div>
@@ -142,7 +142,7 @@
         <div class="xl:absolute xl:right-32 xl:top-5 swiper mySwiper h-[26rem] w-72 bg-black rounded-xl overflow-hidden mt-6">
           <div class="swiper-wrapper text-white h-full w-full">
             <div class="swiper-slide w-full h-full relative">
-              <img class="w-full h-full bg-cover" src="img/abt1.jpg" alt="" />
+              <img class="w-full h-full bg-cover" src="/img/abt1.jpeg" alt="" />
               <div class="absolute bottom-36 left-24">
                 <h1 class="text-2xl font-semibold">Fantasy</h1>
               </div>
@@ -155,7 +155,7 @@
             </div>
 
             <div class="swiper-slide w-full h-full relative">
-              <img class="w-full h-full bg-cover" src="img/abt1.jpg" alt="" />
+              <img class="w-full h-full bg-cover" src="/img/abt1.jpeg" alt="" />
               <div class="absolute bottom-36 left-24">
                 <h1 class="text-2xl font-semibold">Romance</h1>
               </div>
@@ -168,7 +168,7 @@
             </div>
 
             <div class="swiper-slide w-full h-full relative">
-              <img class="w-full h-full bg-cover" src="/public/img/bumi.jpg" alt="" />
+              <img class="w-full h-full bg-cover" src="/img/bumi.jpg" alt="" />
               <div class="absolute bottom-36 left-24">
                 <h1 class="text-2xl font-semibold">Drama</h1>
               </div>
@@ -190,7 +190,7 @@
       <div class="flex justify-center gap-2">
        
         <div class="gap-1">
-          <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image" />
+          <img class="w-8 h-8 rounded-full" src="/img/abt1.jpeg" alt="Jese image" />
           <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
             <div class="flex items-center space-x-2 rtl:space-x-reverse">
               <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
@@ -201,7 +201,7 @@
           </div>
         </div>
         <div class="gap-1">
-          <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image" />
+          <img class="w-8 h-8 rounded-full" src="/img/abt1.jpeg" alt="Jese image" />
           <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
             <div class="flex items-center space-x-2 rtl:space-x-reverse">
               <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
@@ -212,7 +212,7 @@
           </div>
         </div>
         <div class="gap-1">
-          <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="Jese image" />
+          <img class="w-8 h-8 rounded-full" src="/img/abt1.jpeg" alt="Jese image" />
           <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
             <div class="flex items-center space-x-2 rtl:space-x-reverse">
               <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
